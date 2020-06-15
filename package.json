@@ -24,6 +24,7 @@
     "@material-ui/icons": "^4.9.1",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
+    "material-table": "^1.61.0",
     "mongoose": "^5.9.13"
   }
 }

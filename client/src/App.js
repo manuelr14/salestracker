@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import HomePage from './pages/homepage';
-// import Profile from './pages/profile';
-// import Sales from './pages/sales';
-// import Newsale from './pages/newsale';
+import HomePage from './pages/homepage';
+import Profile from './pages/profile';
+import Sales from './pages/sales';
+import Newsale from './pages/newsale';
 
 
 class App extends Component {
@@ -15,9 +15,9 @@ class App extends Component {
 				<div className="App">
 					<Navbar />
 
-					{/* <Switch>
+					<Switch>
 						<Route exact path={[ '/' ]}>
-							<HomePage />
+							<Sales />
 						</Route>
 						<Route exact path={[ '/newsale' ]}>
 							<Newsale />
@@ -28,7 +28,7 @@ class App extends Component {
 						<Route exact path={[ '/profile' ]}>
 							<Profile />
 						</Route>
-					</Switch> */}
+					</Switch>
 				</div>
 			</Router>
 		);
