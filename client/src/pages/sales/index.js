@@ -4,13 +4,14 @@ import MaterialTable from 'material-table';
 export default function MaterialTableDemo() {
   const [state, setState] = React.useState({
     columns: [
+      { title: 'Date', field: 'date', type: 'date' },
       { title: 'Name', field: 'name' },
       { title: 'Last Name', field: 'lastname' },
-      { title: 'Phone Number', field: 'phone', type: 'numeric' },
+      { title: 'Phone', field: 'phone', type: 'numeric' },
       { title: 'Stock Number', field: 'stock' },
       { title: 'Vehicle', field: 'vehicle' },
-      { title: 'split', field: 'partner' },
-      { title: 'we owe', field: 'weowe' },
+      { title: 'Split', field: 'partner' },
+      { title: 'We owe', field: 'weowe' },
       { title: 'Bonus', field: 'bonus', type: 'numeric' },
 
     ],
@@ -23,7 +24,7 @@ export default function MaterialTableDemo() {
 
   return (
     <MaterialTable
-      title="Editable Example"
+      title="Sales"
       columns={state.columns}
       data={state.data}
       editable={{
