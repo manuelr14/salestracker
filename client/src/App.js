@@ -1,40 +1,42 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./App.css";
-import NavBar from "./components/Navbar";
-import Saved from "./pages/Saved";
-import Search from "./pages/Search";
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-
-function App() {
-
-  return (
-    <div>
-      <Router>
-        <NavBar />
-        <Container maxWidth="md" style={{ borderWidth: '1px', border: 'solid', marginBottom: '30px' }}>
-          <Typography component="div"  >
-
-            <h1 style={{ textAlign: 'center' }}>(React) Google Books Search</h1>
-            <h3 style={{ textAlign: 'center' }}>Search for and Save Books of interests</h3>
-
-          </Typography>
-        </Container>
-       
-        <Route exact path="/" component={Search} />
-        <Route exact path="/Search" component={Search} />
-        <Route exact path="/Saved" component={Saved} />
-
-      </Router>
-
-    </div>
+import React, { Component } from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import HomePage from './pages/homepage';
+// import Profile from './pages/profile';
+// import Sales from './pages/sales';
+// import Newsale from './pages/newsale';
 
 
+class App extends Component {
+	render() {
+		return (
+			<Router>
+				<div className="App">
+					<Navbar />
 
-
-  );
+					{/* <Switch>
+						<Route exact path={[ '/' ]}>
+							<HomePage />
+						</Route>
+						<Route exact path={[ '/newsale' ]}>
+							<Newsale />
+						</Route>
+						<Route exact path={[ '/sales' ]}>
+							<Sales />
+						</Route>
+						<Route exact path={[ '/profile' ]}>
+							<Profile />
+						</Route>
+					</Switch> */}
+				</div>
+			</Router>
+		);
+	}
 }
-
+{/* <Route exact path="/" component={Search} />
+<Route exact path="/Search" component={Search} />
+<Route exact path="/Saved" component={Saved} /> */}
 
 export default App;
+
