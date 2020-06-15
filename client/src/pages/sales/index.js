@@ -12,21 +12,30 @@ export default function MaterialTableDemo() {
       { title: 'Vehicle', field: 'vehicle' },
       { title: 'Split', field: 'partner' },
       { title: 'We owe', field: 'weowe' },
-      { title: 'Bonus', field: 'bonus', type: 'numeric' },
+      { title: 'Financed by', field: 'bank' },
+      { title: 'Stkr price', field: 'discount' },
+      { title: 'Bonus', field: 'bonus', type: 'numeric' }
+      
 
     ],
     data: [
-      { name: 'luis', lastname: 'Baran', phone: 6784347584, stock: 'HD455434', vehicle: '2018 4runner', partner: 'Juliana',weowe:'front bumper', bonus: '50'  },
-      { name: 'ricardo', lastname: 'arismendi', phone: 6784347584, stock: 'HD455434', vehicle: '2018 F150'  },
+      { date: '15.06.2020', name: 'luis', lastname: 'Baran', phone: 6784347584, stock: 'HD455434', vehicle: '2018 4runner', partner: 'Juliana',weowe:'front bumper', bonus: '50'  },
+      { date: '15.06.2020', name: 'ricardo', lastname: 'arismendi', phone: 6784347584, stock: 'HD455434', vehicle: '2018 F150'  },
    
     ],
   });
 
+//   function getcount(){
+// var totaldeals= 0
+//     {state.data.length} = totaldeals
+
+//   }
+
   return (
     <MaterialTable
-      title="Sales"
-      columns={state.columns}
-      data={state.data}
+    title= {'Total Deals: '+ state.data.length } 
+    columns={state.columns}
+    data={state.data}
       editable={{
         onRowAdd: (newData) =>
           new Promise((resolve) => {
